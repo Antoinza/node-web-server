@@ -36,6 +36,7 @@ hbs.registerHelper('screamIt', (text) => {
 }); // <- screamIt
 // <- end helpers
 
+// HOME PAGE
 app.get('/', (req, res) => {
   // res.send('<h1>Hello Express!</h1>');
   // res.send({
@@ -51,10 +52,18 @@ app.get('/', (req, res) => {
   });
 });
 
+// ABOUT PAGE
 app.get('/about', (req,res) => {
   //res.send('About Page');
   res.render('about.hbs', {
     pageTitle: 'About Page'
+  });
+});
+
+// PROJECT PAGE
+app.get('/projects', (req,res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page'
   });
 });
 
